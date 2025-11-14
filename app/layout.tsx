@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./(test-page-layout)/_testpage/components/header";
+import Footer from "./(test-page-layout)/_testpage/components/footer";
 
 export const metadata: Metadata = {
   title: "야놀자리서치",
@@ -18,7 +19,7 @@ export default function RootLayout({
       <body className="w-full h-full flex items-center flex-col">
         <Header />
         {children}
-        {/* <footer>푸터 영역</footer> */}
+        <Footer />
       </body>
     </html>
   );
