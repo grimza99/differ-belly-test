@@ -2,7 +2,7 @@ import ArrowContainer from "../components/arrow-container";
 
 export default function DataSection() {
   return (
-    <section className="px-5 lg:px-0">
+    <section className="px-5 lg:px-0 flex-1">
       <ArrowContainer title="데이터">
         <button className="bg-purple600 rounded-2xl flex flex-col items-center gap-8 w-full">
           <img

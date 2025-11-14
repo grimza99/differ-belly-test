@@ -10,7 +10,7 @@ export default function NewsSection() {
   const [contentType, setContentType] = useState<TContentType>("언론보도");
 
   return (
-    <section className="w-full px-5 flex flex-col gap-[30px]">
+    <section className="w-full flex flex-col gap-[30px] flex-2 px-5 lg:px-0">
       <div className="flex justify-between items-center">
         <div className="text-2xl lg:text-[28px] flex flex-col md:flex-row gap-4 items-center">
           <button
@@ -36,7 +36,7 @@ export default function NewsSection() {
           />
         </div>
       </div>
-      <ul className="flex flex-col w-full">
+      <ul className="flex flex-col w-full gap-6">
         {NEWS.map((news) => (
           <NewsCard key={news.key} contentType={contentType} />
         ))}
