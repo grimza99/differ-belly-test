@@ -30,6 +30,7 @@ select {
 @theme {
   --color-primary: #f25430;
 
+  --color-opacity70-white: #ffffffb5;
   --color-black: #1b1716;
   --color-bg-black: #141415;
 
@@ -38,6 +39,7 @@ select {
   --color-gray200: #d9d9d9;
 
   --color-orange200: #f5ebe1;
+  --color-orange700: #e43608;
 
   --color-purple600: #c8b9ff;
 }
