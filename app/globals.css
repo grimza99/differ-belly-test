@@ -22,12 +22,14 @@ a {
   box-sizing: border-box;
 }
 
-button {
+button,
+select {
   cursor: pointer;
 }
+
 @theme {
   --color-black: #1b1716;
   --color-bg-black: #141415;
-
+  --color-gray800: rgba(255, 255, 255, 0.08);
   --color-gray200: rgb(217, 217, 217);
 }
