@@ -2,14 +2,14 @@ import clsx from "clsx";
 import Link from "next/link";
 
 const desktopNavItems = [
-  { name: "Research", path: "/" },
+  { name: "Research", path: "/research" },
   { name: "Datalab", path: "/datalab" },
   { name: "Indexes", path: "/indexes" },
   { name: "About", path: "/about" },
 ];
 const nonDesktopNavItems = [
   { name: "HOME", path: "/" },
-  { name: "RESEARCH", path: "/" },
+  { name: "RESEARCH", path: "/research" },
   { name: "INDEXES", path: "/indexes" },
   { name: "ABOUT", path: "/about" },
 ];
