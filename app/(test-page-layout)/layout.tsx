@@ -3,5 +3,5 @@ export default function TestPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="px-[15px]">{children}</main>;
+  return <main className="w-full">{children}</main>;
 }
