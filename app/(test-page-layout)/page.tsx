@@ -1,10 +1,14 @@
 import DataSection from "./_testpage/data-section";
+import NewsSection from "./_testpage/news-section";
 import SNSSection from "./_testpage/sns-section";
 
 export default function Home() {
   return (
-    <div className="w-full">
-      <DataSection />
+    <div className="w-full flex flex-col ">
+      <div className="flex flex-col gap-14 lg:flex-row lg:gap-20 lg:px-[15px] max-w-5xl w-full m-auto">
+        <NewsSection />
+        <DataSection />
+      </div>
       <SNSSection />
     </div>
   );
