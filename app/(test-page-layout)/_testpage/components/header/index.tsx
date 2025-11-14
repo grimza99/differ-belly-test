@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import LanguageSelector from "./LanguageSelector";
+import HamburgerMenu from "./HamburgerMenu";
+import Nav from "./Nav";
 
 export default function Header() {
   return (
@@ -14,22 +16,11 @@ export default function Header() {
           className="lg:w-[179.95px]"
         />
       </Link>
-      <nav className="items-center w-160 text-center hidden md:flex">
-        <Link href="/" className="flex-1">
-          Research
-        </Link>
-        <Link href="/datalab" className="flex-1">
-          Datalab
-        </Link>
-        <Link href="/indexes" className="flex-1">
-          Indexes
-        </Link>
-        <Link href="/about" className="flex-1">
-          About
-        </Link>
-      </nav>
-      <LanguageSelector />
-      <div></div>
+      <div className="w-160 hidden lg:block">
+        <Nav isSideHeader={false} />
+      </div>
+      <LanguageSelector className="text-lg hidden lg:block" />
+      <HamburgerMenu />
     </header>
   );
 }

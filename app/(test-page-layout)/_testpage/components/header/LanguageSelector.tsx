@@ -1,6 +1,14 @@
-export default function LanguageSelector() {
+export default function LanguageSelector({
+  className,
+}: {
+  className?: string;
+}) {
   return (
-    <select className="text-lg hidden md:block">
+    <select
+      className={className}
+      id="language-selector"
+      name="language-selector"
+    >
       <option>KR</option>
       <option>EN</option>
     </select>

@@ -3,6 +3,7 @@
 :root {
   --background: rgb(255, 255, 255);
   --color-black: #1b1716;
+  --bg-black: #141415;
 }
 
 body {
@@ -21,7 +22,12 @@ a {
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
 @theme {
   --color-black: #1b1716;
+  --color-bg-black: #141415;
+
   --color-gray200: rgb(217, 217, 217);
 }
