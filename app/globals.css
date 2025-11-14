@@ -1,12 +1,33 @@
 @import "tailwindcss";
-
+/*font pretendard 설정하기 */
 :root {
   --background: rgb(255, 255, 255);
+  --color-black: #1b1716;
+  --bg-black: #141415;
 }
 
 body {
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-black);
+  font-family: sans-serif;
   width: 100%;
   height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+@theme {
+  --color-black: #1b1716;
+  --color-bg-black: #141415;
+
+  --color-gray200: rgb(217, 217, 217);
 }
