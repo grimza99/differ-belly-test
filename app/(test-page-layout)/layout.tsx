@@ -3,5 +3,5 @@ export default function TestPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return <main className="px-[15px]">{children}</main>;
 }
