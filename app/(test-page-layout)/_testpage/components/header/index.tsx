@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Header() {
   return (
-    <header className="w-full h-15 md:h-[97px] border-b flex items-center px-5 border-gray200">
+    <header className="w-full h-15 md:h-[97px] border-b flex items-center px-5 md:px-10 border-gray200 justify-between">
       <Link href="/">
         <Image
           src="/logo.svg"
@@ -13,7 +14,7 @@ export default function Header() {
           className="lg:w-[179.95px]"
         />
       </Link>
-      <div className="flex items-center w-full text-center">
+      <nav className="items-center w-160 text-center hidden md:flex">
         <Link href="/" className="flex-1">
           Research
         </Link>
@@ -26,8 +27,9 @@ export default function Header() {
         <Link href="/about" className="flex-1">
           About
         </Link>
-      </div>
-      <div>KR</div>
+      </nav>
+      <LanguageSelector />
+      <div></div>
     </header>
   );
 }
