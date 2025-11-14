@@ -3,6 +3,7 @@
 import { useState } from "react";
 import NewsCard from "./NewsCard";
 import clsx from "clsx";
+const NEWS = [{ key: 1 }, { key: 2 }, { key: 3 }, { key: 4 }, { key: 5 }];
 
 export type TContentType = "언론보도" | "보도자료";
 export default function NewsSection() {
@@ -36,7 +37,9 @@ export default function NewsSection() {
         </div>
       </div>
       <ul className="flex flex-col w-full">
-        <NewsCard contentType={contentType} />
+        {NEWS.map((news) => (
+          <NewsCard key={news.key} contentType={contentType} />
+        ))}
       </ul>
     </section>
   );

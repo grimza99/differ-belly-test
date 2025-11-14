@@ -10,7 +10,7 @@ export default function DataSection() {
             alt="mail.icon.svg"
             className="w-[118px] mt-[54px]"
           />
-          <p className="overflow-wrap text-white text-center mb-[47px]">
+          <p className="text-white text-center mb-[47px]">
             야놀자 리서치가 활용한 데이터를
             <br /> 편하게 사용해보세요!
           </p>
