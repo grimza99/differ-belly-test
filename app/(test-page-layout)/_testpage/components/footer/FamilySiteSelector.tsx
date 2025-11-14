@@ -25,6 +25,7 @@ export default function FamilySiteSelector() {
   return (
     <div className="relative h-12 text-white bg-gray800 border rounded-[30px] border-none text-[14px] px-6 w-[230px] flex items-center">
       <select
+        id="family-site-selector"
         className="appearance-none w-full focus:outline-none"
         value={selectedSite}
         onChange={handleSiteChange}
