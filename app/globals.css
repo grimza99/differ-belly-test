@@ -28,12 +28,17 @@ select {
 }
 
 @theme {
+  --color-primary: #f25430;
+
   --color-black: #1b1716;
   --color-bg-black: #141415;
+
   --color-gray800: #ffffff14;
   --color-gray200: #d9d9d9;
+
   --color-orange200: #f5ebe1;
-  --color-primary: #f25430;
+
+  --color-purple600: #c8b9ff;
 }
 
 @layer utilities {
