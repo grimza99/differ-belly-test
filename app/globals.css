@@ -22,12 +22,37 @@ a {
   box-sizing: border-box;
 }
 
-button {
+button,
+select {
   cursor: pointer;
 }
+
 @theme {
   --color-black: #1b1716;
   --color-bg-black: #141415;
-
+  --color-gray800: rgba(255, 255, 255, 0.08);
   --color-gray200: rgb(217, 217, 217);
+}
+
+@layer utilities {
+  .footer_description h3 {
+    text-align: center;
+    color: white;
+    width: fit-content;
+    font-size: 18px;
+  }
+  .footer_description span {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    width: fit-content;
+    padding: 0px 8px;
+    border-right: 1px solid gray;
+  }
+  .footer_description span:first-child {
+    padding: 0px 8px 0px 0px;
+  }
+  .footer_description span:last-child {
+    border-right: none;
+  }
 }
