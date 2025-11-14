@@ -17,13 +17,13 @@ export default function Header() {
         <Link href="/" className="flex-1">
           Research
         </Link>
-        <Link href="/" className="flex-1">
+        <Link href="/datalab" className="flex-1">
           Datalab
         </Link>
-        <Link href="/" className="flex-1">
+        <Link href="/indexes" className="flex-1">
           Indexes
         </Link>
-        <Link href="/" className="flex-1">
+        <Link href="/about" className="flex-1">
           About
         </Link>
       </div>
