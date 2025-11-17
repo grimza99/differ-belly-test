@@ -38,7 +38,7 @@ export default function InsightSwiper() {
   }, [swiperRef.current?.realIndex]);
 
   return (
-    <>
+    <div>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={50}
@@ -76,6 +76,6 @@ export default function InsightSwiper() {
           onToggleAutoPlay={(toggle) => toggleAutoplay(toggle)}
         />
       </div>
-    </>
+    </div>
   );
 }

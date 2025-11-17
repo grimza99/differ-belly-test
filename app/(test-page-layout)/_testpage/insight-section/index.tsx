@@ -1,4 +1,5 @@
 import InsightCard from "./InsightCard";
+import InsightSwiper from "./InsightSwiper";
 
 const INSIGHTS = [
   { key: 1, label: "야놀자 매력도 지수" },
@@ -7,7 +8,8 @@ const INSIGHTS = [
 ];
 export default function InsightSection() {
   return (
-    <section>
+    <section className="px-5 flex flex-col gap-5 lg:px-[15px]">
+      <InsightSwiper />
       <div className="flex flex-col gap-4 md:flex-row">
         {INSIGHTS.map((insight) => (
           <InsightCard
