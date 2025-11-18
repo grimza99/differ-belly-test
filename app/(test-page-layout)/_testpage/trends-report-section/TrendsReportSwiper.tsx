@@ -1,6 +1,5 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
@@ -8,6 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import TrendsReportCard from "./TrendsReportCard";
 import { TRENDS_REPORT_CONTENT } from "./trends-report-content";
+import CustomPaginationBullets from "./swiper/CustomPaginationBullets";
+import ArrowButton from "@/app/_common/arrow-button/ArrowButton";
 
 export default function TrendsReportSwiper() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,13 +19,11 @@ export default function TrendsReportSwiper() {
     swiperRef.current = swiper;
   };
 
-  const toggleAutoplay = (toggle: "play" | "pause") => {
-    if (swiperRef.current) {
-      if (toggle === "pause") {
-        swiperRef.current.autoplay.stop();
-      } else {
-        swiperRef.current.autoplay.start();
-      }
+  const handleClickArrow = (direction: "prev" | "next") => {
+    if (direction === "next") {
+      swiperRef.current?.slideNext();
+    } else {
+      swiperRef.current?.slidePrev();
     }
   };
 
@@ -39,16 +38,30 @@ export default function TrendsReportSwiper() {
   }, [swiperRef.current?.realIndex]);
 
   return (
-    <>
+    <div className="flex flex-col items-center relative">
+      <ArrowButton
+        direction="left"
+        className="absolute top-1/2 -left-5 z-100"
+        onClick={() => handleClickArrow("prev")}
+      />
       <Swiper
-        modules={[Pagination, Scrollbar]}
+        modules={[]}
         spaceBetween={0}
-        onSlideChange={() => {}}
         onSwiper={handleSwiper}
         speed={1500}
+        slidesPerView={"auto"}
+        breakpoints={{
+          352: {
+            spaceBetween: 16,
+          },
+          768: {
+            spaceBetween: 30,
+          },
+        }}
+        className="w-full lg:w-77 "
       >
         {TRENDS_REPORT_CONTENT.map((report) => (
-          <SwiperSlide key={report.id} className="w-auto!">
+          <SwiperSlide key={report.id} className="w-fit!">
             <TrendsReportCard
               src={report.src}
               title={report.content}
@@ -57,6 +70,18 @@ export default function TrendsReportSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+      <ArrowButton
+        direction="right"
+        className="absolute top-1/2 -right-5 z-100"
+        onClick={() => handleClickArrow("next")}
+      />
+      <div className="mt-5 hidden lg:block">
+        <CustomPaginationBullets
+          totalBullet={TRENDS_REPORT_CONTENT.length}
+          currentIndex={currentIndex}
+          onClickDot={(index) => swiperRef.current?.slideTo(index)}
+        />
+      </div>
+    </div>
   );
 }

@@ -16,7 +16,7 @@ export default function TrendsReportCard({
         src={src}
         alt={src}
         fill
-        className="absolute inset-0 object-contain rounded-2xl -z-10"
+        className="absolute inset-0 object-cover rounded-2xl -z-10"
       />
       <div className="w-full h-full absolute inset-0 bg-black/40 -z-5 flex flex-col justify-end px-5 py-7.5">
         <p className="w-full text-white lg:text-xl">{title}</p>
