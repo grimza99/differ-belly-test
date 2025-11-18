@@ -15,7 +15,7 @@ export default function Home() {
         <TrendsReportSection />
       </div>
       <ResearchReportSection />
-      <div className="flex flex-col gap-14 lg:flex-row lg:gap-20 lg:px-[15px] max-w-5xl w-full m-auto">
+      <div className="flex flex-col gap-14 lg:flex-row lg:gap-20 lg:px-[15px] max-w-5xl w-full m-auto my-14">
         <NewsSection />
         <DataSection />
       </div>
