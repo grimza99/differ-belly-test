@@ -38,7 +38,7 @@ export default function InsightSwiper() {
   }, [swiperRef.current?.realIndex]);
 
   return (
-    <div>
+    <div className="relative h-107 pt-7.5 lg:pt-12.5">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={50}
@@ -50,6 +50,7 @@ export default function InsightSwiper() {
         onSlideChange={() => {}}
         onSwiper={handleSwiper}
         speed={1500}
+        className="shadow-lg h-"
       >
         {INSIGHT_CONTENT.map((content) => (
           <SwiperSlide key={content.id}>
@@ -61,7 +62,7 @@ export default function InsightSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="mt-5 flex justify-center">
+      <div className="flex justify-center absolute bottom-0 left-0 w-full">
         <CustomPagination
           totalSlides={INSIGHT_CONTENT.length}
           currentIndex={currentIndex}

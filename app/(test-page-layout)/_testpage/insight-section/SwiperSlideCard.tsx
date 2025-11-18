@@ -14,7 +14,7 @@ export default function SwiperSlideCard({
 }) {
   const content = `Vol.${vol} ${text}`;
   return (
-    <div className="relative flex w-full h-[350px]  rounded-4xl overflow-hidden">
+    <div className="relative flex w-full h-[350px] rounded-4xl overflow-hidden shadow-xl">
       <Image
         src={src}
         alt={src}

@@ -8,9 +8,9 @@ const INSIGHTS = [
 ];
 export default function InsightSection() {
   return (
-    <section className="px-5 flex flex-col gap-5 lg:px-[15px]">
+    <section className="px-5 flex flex-col gap-5 lg:gap-10 lg:px-[15px]">
       <InsightSwiper />
-      <div className="flex flex-col gap-4 md:flex-row">
+      <div className="flex flex-col gap-4 md:flex-row lg:mt-5">
         {INSIGHTS.map((insight) => (
           <InsightCard
             key={insight.key}
