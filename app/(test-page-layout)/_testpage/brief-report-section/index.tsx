@@ -2,10 +2,10 @@
 import { useRef } from "react";
 import ArrowButton from "@/app/_common/arrow-button/ArrowButton";
 import ArrowContainer from "../components/arrow-container";
-import { RESEARCH_REPORT_CONTENT } from "./swiper/research-report-content";
-import ResearchReportCard from "./swiper/ResearchReportCard";
+import { BRIEF_REPORT_CONTENT } from "./swiper/brief-report-content";
+import BriefReportCard from "./swiper/BriefReportCard";
 
-export default function ResearchReportSection() {
+export default function BriefReportSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const handleScrollLeft = () => {
@@ -39,8 +39,8 @@ export default function ResearchReportSection() {
             ref={scrollContainerRef}
             className="overflow-x-scroll flex gap-4 pb-4 lg:pb-0 scrollbar-bg-gray300"
           >
-            {RESEARCH_REPORT_CONTENT.map((content) => (
-              <ResearchReportCard
+            {BRIEF_REPORT_CONTENT.map((content) => (
+              <BriefReportCard
                 key={content.id}
                 src={content.src}
                 text={content.text}

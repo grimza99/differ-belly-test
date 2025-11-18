@@ -6,7 +6,7 @@ interface ResearchReportCardProps {
   text: string;
   date: string;
 }
-export default function ResearchReportCard({
+export default function BriefReportCard({
   src,
   vol,
   text,

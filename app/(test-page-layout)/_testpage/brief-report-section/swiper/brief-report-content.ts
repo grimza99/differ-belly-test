@@ -1,4 +1,4 @@
-export const RESEARCH_REPORT_CONTENT = [
+export const BRIEF_REPORT_CONTENT = [
   {
     id: 1,
     src: "/insight/img1.png",
