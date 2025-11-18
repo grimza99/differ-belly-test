@@ -1,7 +1,7 @@
 @import "tailwindcss";
 /*font pretendard 설정하기 */
 :root {
-  --background: rgb(255, 255, 255);
+  --background: #ffffff;
   --color-black: #1b1716;
   --bg-black: #141415;
 }
@@ -65,4 +65,18 @@ select {
   .footer_description span:last-child {
     border-right: none;
   }
+}
+
+::-webkit-scrollbar {
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray200);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-black);
+  border-radius: 10px;
 }
