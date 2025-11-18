@@ -38,49 +38,64 @@ export default function TrendsReportSwiper() {
   }, [swiperRef.current?.realIndex]);
 
   return (
-    <div className="flex flex-col items-center relative">
-      <ArrowButton
-        direction="left"
-        className="absolute top-1/2 -left-5 z-100"
-        onClick={() => handleClickArrow("prev")}
-      />
-      <Swiper
-        modules={[]}
-        spaceBetween={0}
-        onSwiper={handleSwiper}
-        speed={1500}
-        slidesPerView={"auto"}
-        breakpoints={{
-          352: {
-            spaceBetween: 16,
-          },
-          768: {
-            spaceBetween: 30,
-          },
-        }}
-        className="w-full lg:w-77 "
-      >
-        {TRENDS_REPORT_CONTENT.map((report) => (
-          <SwiperSlide key={report.id} className="w-fit!">
+    <div className="flex flex-col items-center">
+      <div className="hidden lg:block relative">
+        <ArrowButton
+          direction="left"
+          className="absolute top-1/2 -left-5 z-100"
+          onClick={() => handleClickArrow("prev")}
+        />
+        <Swiper
+          modules={[]}
+          spaceBetween={0}
+          onSwiper={handleSwiper}
+          speed={1500}
+          slidesPerView={"auto"}
+          breakpoints={{
+            352: {
+              spaceBetween: 16,
+            },
+            768: {
+              spaceBetween: 30,
+            },
+          }}
+          className="w-full lg:w-77  "
+        >
+          {TRENDS_REPORT_CONTENT.map((report) => (
+            <SwiperSlide key={report.id} className="w-fit!">
+              <TrendsReportCard
+                src={report.src}
+                title={report.content}
+                date={report.date}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <ArrowButton
+          direction="right"
+          className="absolute top-1/2 -right-5 z-100"
+          onClick={() => handleClickArrow("next")}
+        />
+        <div className="mt-5 flex flex-col items-center w-full">
+          <CustomPaginationBullets
+            totalBullet={TRENDS_REPORT_CONTENT.length}
+            currentIndex={currentIndex}
+            onClickDot={(index) => swiperRef.current?.slideTo(index)}
+          />
+        </div>
+      </div>
+      {/* 모바일용 수평 스크롤 */}
+      <div className="lg:hidden w-full overflow-x-auto">
+        <div className="flex gap-4 pb-2 w-max mb-[30px]">
+          {TRENDS_REPORT_CONTENT.map((report) => (
             <TrendsReportCard
+              key={report.id}
               src={report.src}
               title={report.content}
               date={report.date}
             />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <ArrowButton
-        direction="right"
-        className="absolute top-1/2 -right-5 z-100"
-        onClick={() => handleClickArrow("next")}
-      />
-      <div className="mt-5 hidden lg:block">
-        <CustomPaginationBullets
-          totalBullet={TRENDS_REPORT_CONTENT.length}
-          currentIndex={currentIndex}
-          onClickDot={(index) => swiperRef.current?.slideTo(index)}
-        />
+          ))}
+        </div>
       </div>
     </div>
   );
