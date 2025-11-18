@@ -15,7 +15,7 @@ export default function InsightCard({
   return (
     <div
       className={clsx(
-        "w-full flex flex-col relative  text-white p-3 rounded-2xl",
+        "w-full flex flex-col relative text-white p-3 rounded-2xl lg:p-6",
         id === 2 ? "bg-orange700" : "bg-primary"
       )}
     >
