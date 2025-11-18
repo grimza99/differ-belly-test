@@ -15,7 +15,7 @@ const FOOTER_SPANS = [
 
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 w-full bg-black px-[26px] pt-9 pb-[65px] flex lg:pt-[52px] lg:px-22 lg:pb-[95px] flex-col gap-10 lg:flex-row lg:justify-between">
+    <footer className="w-full bg-black px-[26px] pt-9 pb-[65px] flex lg:pt-[52px] lg:px-22 lg:pb-[95px] flex-col gap-10 lg:flex-row lg:justify-between">
       <section className="flex flex-col gap-4">
         <Image src="/logo_white.svg" alt="logo-white" width={143} height={24} />
         <div className="footer_description white-space-pre-line">
