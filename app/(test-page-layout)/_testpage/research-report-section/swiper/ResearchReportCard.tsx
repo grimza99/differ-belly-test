@@ -9,7 +9,7 @@ export default function ResearchReportCard({
   date,
 }: ResearchReportCardProps) {
   return (
-    <div className="flex flex-col w-47.5 md:w-[205px] lg:w-47.5 gap-4">
+    <div className="flex flex-col w-47.5 md:w-[205px] lg:w-47.5 gap-4 shrink-0">
       <Image
         src={src}
         alt={src}
