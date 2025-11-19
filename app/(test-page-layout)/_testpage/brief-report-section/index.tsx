@@ -37,7 +37,7 @@ export default function BriefReportSection() {
           />
           <div
             ref={scrollContainerRef}
-            className="overflow-x-scroll flex gap-4 pb-4 lg:pb-0 scrollbar-bg-gray300"
+            className="overflow-x-scroll flex gap-4 pb-4 lg:pb-0 custom-scrollbar"
           >
             {BRIEF_REPORT_CONTENT.map((content) => (
               <BriefReportCard

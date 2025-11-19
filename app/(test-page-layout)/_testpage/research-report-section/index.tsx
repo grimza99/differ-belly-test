@@ -37,7 +37,7 @@ export default function ResearchReportSection() {
           />
           <div
             ref={scrollContainerRef}
-            className="flex gap-4 lg:gap-10 md:gap-5 scrollbar-bg-gray300 overflow-x-scroll"
+            className="flex gap-4 lg:gap-10 md:gap-5 scrollbar-bg-gray300 overflow-x-scroll custom-scrollbar"
           >
             {RESEARCH_REPORT_CONTENT.map((content) => (
               <ResearchReportCard
