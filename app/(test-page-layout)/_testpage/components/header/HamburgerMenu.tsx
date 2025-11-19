@@ -6,6 +6,7 @@ import LanguageSelector from "./LanguageSelector";
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       className="lg:hidden ml-4 cursor-pointer"
@@ -26,14 +27,19 @@ export default function HamburgerMenu() {
         />
       </svg>
       {isOpen && (
-        <div className="fixed right-0 top-0 h-full w-[calc(70%)] bg-bg-black text-white">
+        <div className="fixed right-0 top-0 h-full w-[calc(70%)] bg-bg-black text-white z-200">
           <div className="h-fit w-full flex justify-end">
-            <button type="button" className="p-5 ">
+            <button
+              className="p-5"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsOpen(false);
+              }}
+            >
               <img
                 alt="close icon"
                 src="/icons/x.icon.svg"
                 className="w-[30px] h-[30px]"
-                onClick={() => setIsOpen(false)}
               />
             </button>
           </div>
