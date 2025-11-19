@@ -27,7 +27,7 @@ export default function SwiperSlideCard({
           인사이트
         </h6>
         <p className="text-white mb-4 text-[28px] lg:text-[44px]">{content}</p>
-        <Button label="자세히보기" onClick={() => {}} />
+        <Button label="자세히보기" onClick={() => {}} variant="primary" />
       </div>
     </div>
   );
