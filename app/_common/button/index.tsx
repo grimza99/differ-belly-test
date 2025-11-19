@@ -13,7 +13,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({
   label,
   onClick,
-  variant = "primary",
+  variant,
   className,
   ...props
 }: ButtonProps) {

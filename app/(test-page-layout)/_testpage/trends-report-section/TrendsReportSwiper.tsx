@@ -85,7 +85,7 @@ export default function TrendsReportSwiper() {
         </div>
       </div>
       {/* 모바일용 수평 스크롤 */}
-      <div className="lg:hidden w-full overflow-x-auto">
+      <div className="lg:hidden w-full overflow-x-auto custom-scrollbar">
         <div className="flex gap-4 pb-2 w-max mb-[30px]">
           {TRENDS_REPORT_CONTENT.map((report) => (
             <TrendsReportCard
