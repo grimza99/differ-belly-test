@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import SwiperSlideCard from "./SwiperSlideCard";
+import CustomPagination from "./CustomPagination";
 import { INSIGHT_CONTENT } from "./insight.content";
-import CustomPagination from "./swiper/CustomPagination";
 
 export default function InsightSwiper() {
   const [currentIndex, setCurrentIndex] = useState(0);

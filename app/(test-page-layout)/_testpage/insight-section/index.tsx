@@ -1,5 +1,5 @@
 import InsightCard from "./InsightCard";
-import InsightSwiper from "./InsightSwiper";
+import InsightSwiper from "./swiper/InsightSwiper";
 
 const INSIGHTS = [
   { key: 1, label: "야놀자 매력도 지수" },

@@ -1,4 +1,4 @@
-import AnimatedSection from "../_common/AnimatedSection";
+import AnimatedSection from "../_common/animated-section/AnimatedSection";
 import BriefReportSection from "./_testpage/brief-report-section";
 import DataSection from "./_testpage/data-section";
 import InsightSection from "./_testpage/insight-section";
